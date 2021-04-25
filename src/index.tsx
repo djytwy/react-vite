@@ -7,11 +7,12 @@ import NotFound from './pages/notFound';
 import LearnHoc from './pages/learnHoc';
 import LearnCustHooks from './pages/learnCustHooks';
 import LearnMobx from './pages/learnMobx';
+import EletricRoom from './pages/eletricRoom';
 // mobx
 import { user } from './store/user';
+import { eletricRoomState } from './store/eletricRoom';
 
 export default function Index() {
-    
     return (
         <Router>
             <Switch>
@@ -27,7 +28,12 @@ export default function Index() {
                 <Route path="/customHook">
                     <LearnCustHooks />
                 </Route>
-                <Route>
+                <Route path="/eletricRoom">
+                    <Provider {...eletricRoomState}>
+                        <EletricRoom />
+                    </Provider>
+                </Route>
+                <Route path="/learnMobx">
                     <Provider {...user}>
                         <LearnMobx name='twy' age={18} />
                     </Provider>

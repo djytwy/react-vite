@@ -1,0 +1,9 @@
+.container_V {
+    display: flex;
+    flex-direction: column;
+}
+.container_V__inner {
+    font-size: 14px;
+    padding-bottom: 15px;
+    width: 120px;
+}
